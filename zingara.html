@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-image:url(https://www.shutterstock.com/image-photo/sea-cuisine-professional-cook-prepares-260nw-1387710602.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;
+            height:400px;
+            color: green;
+            font-size:50px;
+            padding-left:20px;
+            text-align: left;
+            padding: 1rem 0;
+            font-family:Andalé Mono;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+        }
+        .menu-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .menu-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .reservation, .location, .testimonials {
+            padding: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input, .form-group textarea, .form-group button {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #555;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+        .testimonial {
+            margin-bottom: 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to <br> Zingara </h1>
+    </header>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#location">Location</a>
+        <a href="#testimonials">Reviews</a>
+    </nav>
+
+    <section id="menu" class="menu">
+        <div class="menu-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhvwaW9cU7ax46RCdAQx_Xc3ChqIN0SXXq2Q&s" alt="Dish 1">
+            <h3>dal bati </h3>
+            <p>600 Rs</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmZVH48rs3hBryNV37ULGt2wqfNh2q-MJsTA&s" alt="Dish 2">
+            <h3>shahi paneer </h3>
+            <p>400 RS</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXkWVhXeXvIqwhSaLJ0ucHEZM32woCQ5T6hg&s" alt="Dish 3">
+            <h3> veg thali </h3>
+            <p>500 Rs</p>
+        </div>
+    </section>
+
+    <section id="reservation" class="reservation">
+        <h2>Make a Reservation</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="location" class="location">
+        <h2>Our Location</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434508616!2d144.9556510154748!3d-37.81725587975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5776e1e4b814ed0!2sLocal%20Restaurant!5e0!3m2!1sen!2sus!4v1692721119904!5m2!1sen!2sus" 
+            allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Customer Reviews</h2>
+        <div class="testimonial">
+            <p>"Amazing food and excellent service!" - Govind Goyal.</p>
+        </div>
+        <div class="testimonial">
+            <p>"Best dining experience I've had in years!" - Satish Yadav.</p>
+        </div>
+        <div class="testimonial">
+            <p>"Highly recommend the dal bati!" - Apurva mital .</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Local Restaurant. All rights reserved.</p>
+    </footer>
+</body>
+</html>
